@@ -1,59 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Student Activities Platform</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Activity Platform - Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">Extracurriculars</div>
-        <ul class="nav-links">
-            <li><a href="#dashboard">Dashboard</a></li>
-            <li><a href="#events">Events</a></li>
-            <li><a href="#register">Register</a></li>
-            <li><a href="#analytics">Analytics</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Welcome to the Student Extracurricular Activities Platform</h1>
-    </header>
-    <main>
-        <section id="dashboard">
-            <h2>Personalized Student Dashboard</h2>
-            <div id="participation-summary">
-                <!-- Participation info loaded here -->
+    <div class="login-container">
+        <h2>Activity Platform Login</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
             </div>
-        </section>
-        <section id="events">
-            <h2>Upcoming Events</h2>
-            <div id="event-list">
-                <!-- Event list loaded here -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required>
             </div>
-        </section>
-        <section id="register">
-            <h2>Register for an Event</h2>
-            <form id="registration-form">
-                <label for="studentName">Student Name:</label>
-                <input type="text" id="studentName" name="studentName" required />
-                <label for="eventSelect">Select Event:</label>
-                <select id="eventSelect" name="event">
-                    <option value="Club Meeting">Club Meeting</option>
-                    <option value="Sports Day">Sports Day</option>
-                    <option value="Art Competition">Art Competition</option>
-                </select>
-                <button type="submit">Register</button>
-            </form>
-            <div id="confirmation"></div>
-        </section>
-        <section id="analytics">
-            <h2>Participation Analytics</h2>
-            <div id="analytics-report">
-                <!-- Analytics info loaded here -->
-            </div>
-        </section>
-    </main>
-    <script type="module" src="script.js"></script>
+            <button type="submit" class="btn">Login</button>
+            <p id="login-error" class="error"></p>
+        </form>
+    </div>
+    
+    <script src="login.js"></script>
 </body>
 </html>
